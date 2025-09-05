@@ -1,0 +1,36 @@
+Informações importantes:
+
+Bibliotecas:
+-> PANDAS
+=> Lê arquivos
+=> DataFrames(tabelas)
+=> Operações : Somar, contar..
+=> Tratar dados : Nulos, conversão
+
+-> MATPLOTLIB
+=> Cria gráficos : Linha, histogrma, barra
+
+-> SEABORN
+=> Visualização de dados estilizada.
+
+df['Released_Year'] = df['Released_Year'].astype(int)
+=> Nesse caso, estou convertendo de objeto para inteiro(por ano)
+
+df['Runtime'] = df['Runtime'].str.extract('(\d+)').astype(int)
+=> O tempo está como uma string ex: "120 min", então converter para números inteiros
+facilita a manipulação, com uso de regex;
+
+histplot -> Função do seaborn para criar histogrmas
+bins -> Intervalos
+Kde -> É uma constante, desenha a curva de densidade sobre o histograma
+
+['IMDB_Rading'].mean() -> Calcula a média
+sort_values(ascending=False) -> Organiza do melhor ao pior
+kind= 'bar' -> Gráfico de barras
+
+sns.scatterplot -> Gráfico de dispersão, relacionar variáveis
+dataset -> Conjunto de dados organizados
+
+errors='coerce' -> Tudo que não é número vira NaN
+dropna() -> Remove linhas problemáticas
+astype(int) → Converte os anos válidos para inteiro sem erro
